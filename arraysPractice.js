@@ -1,5 +1,5 @@
 //Once you complete a problem, open up Chrome and check the answer in the console.
-//GO BACK TO LINE 136, 166
+//GO BACK TO LINE 186, and 197
 
 var arr = [10,20,30];
 //Create a function named 'first' that is given 'arr' as the argument and  returns the first item the given array.
@@ -134,11 +134,7 @@ var str = 'this is my sentence';
   //Code Here
 
 var reverse = function(str) {
-    var newStr = [];
-            for (var i = str.length - 1; i >= 0; i--) {
-            newStr.push(str[i]);
-        }
-        return newStr;
+    return str.split('').reverse().join('');
 }
 reverse(str);
 
@@ -158,39 +154,43 @@ reverse(str);
   myGroceryList then return the new, updated grocery list.
 */
   //Code Here
-  var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
-  var itemToRemove = 'chips';
-  var itemToAdd = 'Jerky';
-
+var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 var removeItem = function(myGroceryList, itemToRemove) {
 
     for (var i = 0; i < myGroceryList.length; i++) {
-        if (myGroceryList[i] === itemToRemove) {
-            delete myGroceryList[i];
+        if (myGroceryList[i] ===itemToRemove) {
+            myGroceryList.splice(i, 1);
         }
     }
-    return myGroceryList;
 }
+removeItem(myGroceryList, 'chips');
 
 var addItem = function(myGroceryList, itemToAdd) {
 
-    myGroceryList.push(itemToAdd);
-    return myGroceryList;
-}
+    return myGroceryList.push(itemToAdd);
 
-removeItem(myGroceryList, itemToRemove);
-addItem(myGroceryList, itemToAdd);
+}
+addItem(myGroceryList, 'Jerky');
+
+//itemToRemove = 'chips';
+//itemToAdd = 'Jerky';
+
 //Next Problem
+
 
 
 
 //Write a function called maker that creates an array, fills that array with numbers from 1 to 215, then returns the array.
 
   //Code Here
-
 var maker = function() {
+
+
+
 }
 maker();
+
+
 //Next Problem
 
 
@@ -200,7 +200,11 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 
   //Code Here
 
+var addTen = function(numbers) {
 
+
+}
+addTen(numbers)
 
 //Next Problem
 
@@ -220,7 +224,6 @@ for(var i = 0; i < num2; i++){
 //Write a function that is given arr1 and arr2 is it's only arguments. Return the array which is longest.
 
   //Code Here
-
 
 /*As a continuation of the previous problem, write another function called 'both'.
   Your 'both' function will be given two arguments, arr1 and arr2 (from the previous example)
