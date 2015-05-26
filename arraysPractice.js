@@ -1,5 +1,4 @@
 //Once you complete a problem, open up Chrome and check the answer in the console.
-//GO BACK TO LINE 186, and 197
 
 var arr = [10,20,30];
 //Create a function named 'first' that is given 'arr' as the argument and  returns the first item the given array.
@@ -66,10 +65,8 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
 
 var evenFinder = function(nums) {
     for (var i = 0; i < nums.length; i++) {
-        if (nums[i] % 2 === 0) {
-
-        } else {
-            delete(nums[i]);
+        if (nums[i] % 2 !== 0) {
+            nums.splice(i, 1);
         }
     }
     return nums;
@@ -113,13 +110,11 @@ var numbers = [0,3,4,5,6,7,9,14,17,24,25,26,29,30];
 
 var finder = function() {
     for (var i = 0; i < numbers.length; i++) {
-        if (numbers[i] === getRandomArbitrary) {
+        if (numbers[i] === getRandomArbitrary()) {
             return "True";
-        }  else {
-            return "False";
+            }
         }
-    }
-    getRandomArbitrary();
+        return "False";
 }
 finder();
 
@@ -178,19 +173,17 @@ addItem(myGroceryList, 'Jerky');
 //Next Problem
 
 
-
-
 //Write a function called maker that creates an array, fills that array with numbers from 1 to 215, then returns the array.
 
   //Code Here
 var maker = function() {
-
-
-
+    var arr = [];
+    for (var i = 0; i <= 215; i++) {
+      arr.push(i);
+    }
+    return arr;
 }
-maker();
-
-
+maker()
 //Next Problem
 
 
@@ -200,11 +193,14 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 
   //Code Here
 
-var addTen = function(numbers) {
+var addTen = function() {
 
-
+    for (var i = 0; i < numbers.length; i++) {
+        numbers.splice(i, 1, parseInt(numbers[i]) + 10);
+    }
+    return numbers;
 }
-addTen(numbers)
+addTen()
 
 //Next Problem
 
@@ -225,9 +221,23 @@ for(var i = 0; i < num2; i++){
 
   //Code Here
 
+var longest = function(arr1, arr2) {
+    if (arr1.length > arr2.length) {
+        return arr1;
+    }
+    else {
+        return arr2;
+    }
+}
+
 /*As a continuation of the previous problem, write another function called 'both'.
   Your 'both' function will be given two arguments, arr1 and arr2 (from the previous example)
   'both' should return a new array full of numbers that are found in both arr1 and arr2.
 */
 
   //Code Here
+var both = function(arr1, arr2) {
+    var newArray = [arr1[i], arr2[i]];
+    return newArray;
+}
+both(arr1, arr2);
