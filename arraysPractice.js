@@ -67,6 +67,7 @@ var evenFinder = function(nums) {
     for (var i = 0; i < nums.length; i++) {
         if (nums[i] % 2 !== 0) {
             nums.splice(i, 1);
+            i--;
         }
     }
     return nums;
@@ -153,8 +154,9 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 var removeItem = function(myGroceryList, itemToRemove) {
 
     for (var i = 0; i < myGroceryList.length; i++) {
-        if (myGroceryList[i] ===itemToRemove) {
+        if (myGroceryList[i] === itemToRemove) {
             myGroceryList.splice(i, 1);
+            i--;
         }
     }
 }
